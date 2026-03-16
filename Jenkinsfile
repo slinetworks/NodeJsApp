@@ -23,7 +23,7 @@ pipeline {
 				stage("Build Docker Image"){
 						steps {
 								Script {
-										docker.build("nodeimage"+"$BUILD_NUMBER")
+										docker.build("nodeimage:${env.BUILD_NUMBER}")
 								}
 						}
 				}
