@@ -1,11 +1,11 @@
 # Use an official nodeJS image as the base image
-FROM node: latest
+FROM node:latest
 
 # Set working directory in the container
 WORKDIR /app
 
 # Copy package.json and package-lock. json to the container
-COPY package *. json ./
+COPY package*.json ./
 
 # Install nodeJS dependencies
 RUN npm install
